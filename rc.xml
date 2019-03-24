@@ -590,18 +590,17 @@
 
 #             Application setting
 ########################################################################################
-    <application name="sakura">  # terminal maximized
-      <maximized>true</maximized>
+
+    #conky
+    <application name="Conky" class="Conky">
+      <focus>no</focus>
+      <layer>above</layer>
+      # 'above', 'normal', or 'below'
       <decor>no</decor>
+      <skip_pager>yes</skip_pager>
+     <skip_taskbar>yes</skip_taskbar>
     </application>
-    <application name="sakura_fish">  # terminal maximized
-      <maximized>true</maximized>
-      <decor>no</decor>
-    </application>
-    <application name="sakura_nvim">  # terminal maximized
-      <maximized>true</maximized>
-      <decor>no</decor>
-    </application>
+
     <application name="lxterminal"><maximized>true</maximized><decor>no</decor></application>
     <application name="xterm"><maximized>true</maximized><decor>no</decor></application>
     <application name="nvim"><maximized>true</maximized><decor>no</decor></application>
