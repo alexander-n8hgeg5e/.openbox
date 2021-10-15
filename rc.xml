@@ -163,66 +163,62 @@
     <!-- 'Left', 'Middle', 'Right' -->
   </dock>
   <keyboard>
-
-<keybind key="C-A-S-q">
-    <action name="Execute">
-        <command>openbox --exit</command>
-    </action>
-</keybind>
-
+    <keybind key="C-A-S-q">
+        <action name="Execute">
+            <command>openbox --exit</command>
+        </action>
+    </keybind>
     <keybind key="C-A-x">
       <action name="Execute">
         <command>clipster -sc</command>
       </action>
     </keybind>
     <!-- Keybindings for windows -->
-    <keybind key="C-A-e">
+    <keybind key="C-A-i">
       <action name="ToggleMaximizeFull"/>
     </keybind>
     <keybind key="C-A-q">
       <action name="Close"/>
     </keybind>
-    <!-- Keybindings for window switching -->
-    <keybind key="C-Tab">
-      <action name="NextWindow"/>
-    </keybind>
-    <keybind key="C-A-Tab">
-      <action name="PreviousWindow"/>
-    </keybind>
-    <keybind key="C-A-d">
+    <keybind key="C-A-k">
       <action name="Iconify"/>
     </keybind>
+    <!-- Keybindings for window switching -->
+    <keybind key="A-Tab">
+      <action name="NextWindow"/>
+    </keybind>
+    <keybind key="S-A-Tab">
+      <action name="PreviousWindow"/>
+    </keybind>
+  <!-- Keybindings for window switching with the arrow keys -->
+  <keybind key="C-A-f">
+    <action name="DirectionalCycleWindows">
+      <direction>right</direction>
+    </action>
+  </keybind>
+  <keybind key="C-A-s">
+    <action name="DirectionalCycleWindows">
+      <direction>left</direction>
+    </action>
+  </keybind>
+  <keybind key="C-A-e">
+    <action name="DirectionalCycleWindows">
+      <direction>up</direction>
+    </action>
+  </keybind>
+  <keybind key="C-A-d">
+    <action name="DirectionalCycleWindows">
+      <direction>down</direction>
+    </action>
+  </keybind>
     <!-- Keybindings for running applications -->
-    <keybind key="C-A-f">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>false</enabled>
-          <name>de_st_nvim</name>
-        </startupnotify>
-        <command>de_st_nvim</command>
-      </action>
-    </keybind>
-    <keybind key="C-A-a">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>nvim</name>
-        </startupnotify>
-        <command>st -n nvim -e nvim -c 'call Autostart()'</command>
-      </action>
-    </keybind>
-    <keybind key="C-A-t">
-      <action name="Execute">
-        <command>st -n st</command>
-      </action>
-    </keybind>
     <!--keybindings for LXPanel -->
-    <keybind key="C-A-space">
+    <keybind key="A-space">
       <action name="Execute">
-        <command>lxpanelctl run</command>
+        <command>menu_run</command>
       </action>
     </keybind>
-    <keybind key="F11">
+    <keybind key="F23">
       <action name="ToggleFullscreen"/>
     </keybind>
   </keyboard>
@@ -609,3 +605,5 @@
     <application name="Navigator" class="Firefox"><decor>no</decor><maximized>true</maximized></application>
   </applications>
 </openbox_config>
+
+<!--  vim: set foldnestmax=999 foldmethod=indent  : -->
